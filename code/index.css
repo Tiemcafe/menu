@@ -40,7 +40,7 @@ main {
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(980px, 92%);
+  width: min(980px, 60%);
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ main {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  padding: 8px 14px;
+  padding: 8px 25px;
   border-radius: 999px;
   transition: all 0.25s ease;
 }
@@ -77,7 +77,7 @@ main {
   animation: fadeUp 0.8s ease both;
 }
 
-.profile-img {
+#profile img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -90,6 +90,30 @@ h1 {
   margin-top: 20px;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
+}
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+#food {
+  align-items: center;
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.food_info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 12px 28px rgba(0, 119, 182, 0.25);
 }
 
 
@@ -107,20 +131,19 @@ h1 {
 
 @media (max-width: 900px) {
   .about-grid,
-  .pro_1,
-  .pro_2 {
+  .food_info {
     grid-template-columns: 1fr;
   }
 
-  .pro_1 img,
-  .pro_2 img {
+  
+  .food_info img {
     max-height: 280px;
   }
 }
 
 @media (max-width: 640px) {
   main {
-    width: 94%;
+    width: 98%;
     padding-top: 120px;
   }
 
@@ -132,12 +155,15 @@ h1 {
 
   .navbar {
     border-radius: 18px;
-    justify-content: flex-start;
+    justify-content: flex;
     padding: 8px;
+    width: 70%;
+
   }
 
   .navbar a {
     font-size: 0.9rem;
-    padding: 7px 11px;
-  }
+    padding: 5px 5px;
+    
+   }
 }
